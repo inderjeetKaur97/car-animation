@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car animation</title>
+    <link rel="stylesheet" href="car-style.css">
+</head>
+
+<body>
+    <div class="sky">
+        <div class="trees"></div>
+        <div class="car">
+            <!-- <img src="Car Aminated\car_body.png" alt=""> -->
+            <div class="wheel" id="wheel1">
+                <!-- <img src="Car Aminated\car_wheel_left.png" alt=""> -->
+            </div>
+            <div class="wheel" id="wheel2">
+                <!-- <img src="Car Aminated\car_wheel_right.png" alt=""> -->
+            </div>
+        </div>
+        <div class="road"></div>
+    </div>
+    <script>
+        audio = new Audio('sound.mp3')
+        setTimeout(() => {
+            audio.play();
+            audio.loop=true;
+        }, 1000);
+        
+    </script>
+</body>
+
+</html>

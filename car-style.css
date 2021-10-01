@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.sky {
+    position: relative;
+    background-image: url('Car Aminated/background.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    /* animation: trackmove 4s linear 0s infinite; */
+
+}
+
+.trees {
+    position: absolute;
+    bottom: 25vh;
+    background-image: url('Car Aminated/trees.png');
+    height: 100%;
+    width: 700vw;
+    animation: trackmove 1s linear 0s infinite;
+
+    /* background-size: center; */
+}
+
+.road {
+    position: absolute;
+    background-image: url('Car Aminated/track.png');
+    background-repeat: repeat-x;
+    height: 30vh;
+    width: 300vw;
+    bottom: 0%;
+    animation: trackmove 0.5s linear 0s infinite;
+}
+
+.car {
+    background-image: url('Car Aminated/car_body.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* border: 2px solid red; */
+    position: absolute;
+    z-index: +1;
+    top: 57%;
+    left: 20%;
+    height: 20vh;
+    width: 20vw;
+    animation: carmoveyaxis 0.5s linear 0s infinite;
+
+}
+
+.wheel {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* z-index: +2; */
+}
+
+#wheel1 {
+    background-image: url('Car Aminated/car_wheel_left.png');
+    position: relative;
+    top: 8vh;
+    height: 10vh;
+    width: 5vw;
+    left: 2vw;
+    /* border: 2px solid rgb(0, 0, 0); */
+    animation: wheelrotate 0.2s linear 0s infinite;
+}
+
+#wheel2 {
+    background-image: url('Car Aminated/car_wheel_right.png');
+    position: relative;
+    top: -2vh;
+    height: 10vh;
+    width: 5vw;
+    left: 11.5vw;
+    /* border: 2px solid rgb(0, 0, 0); */
+    animation: wheelrotate 0.2s linear 0s infinite;
+
+}
+
+@keyframes wheelrotate {
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes trackmove {
+    100% {
+        transform: translateX(-100vw)
+    }
+
+}
+
+@keyframes carmoveyaxis {
+    0% {
+        transform: translateY(1vh)
+    }
+
+    50% {
+        transform: translateY(-1vh)
+    }
+
+    100% {
+        transform: translateY(1vh)
+    }
+
+}
